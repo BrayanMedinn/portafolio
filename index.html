@@ -6,48 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/jenthill" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jenthill" rel="stylesheet" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <header>
       <nav class="nav_styledNav">
         <div class="logo">
-            <img src="./img/bm-black.png" width="" alt="logo-m.png">
+          <img src="./img/bm-black.png" width="" alt="logo-m.png" />
         </div>
-    
-       <div class="nav-styled">
-        <ul>
+
+        <div class="nav-styled">
+          <ul>
             <li>About</li>
             <li>Experience</li>
             <li>Work</li>
             <li>Contact</li>
           </ul>
-       </div>
+        </div>
+
+        <div class="nav-mobile">
+          <ul>
+            <li>About</li>
+            <li>Experience</li>
+            <li>Work</li>
+            <li>Contact</li>
+          </ul>
+        </div>
       </nav>
     </header>
     <div class="left"></div>
     <div class="right"></div>
 
     <div class="content">
-        <main>
-            <section>
-                <div class="transition title-main">
-                    <p>My name is</p>
-                </div>
-                <div class="transition title-main">
-                    <h2>Brayan Medina</h2>
-                </div>
-                <div class="transition title-main">
-                    <h3>I´m a responsive website developer</h3>
-                </div>
-                <!-- https://assets3.lottiefiles.com/packages/lf20_xvmprung.json -->
-                <!-- https://assets9.lottiefiles.com/packages/lf20_m9fz64i8.json -->
-                <!-- https://assets6.lottiefiles.com/packages/lf20_nOfkZot060.json -->
-            </section>
-            <lottie-player class="svg-developer" src="https://assets3.lottiefiles.com/packages/lf20_xvmprung.json" background="transparent"  speed="1"  style="width: 600px; height: 600px;" loop autoplay></lottie-player>
-        </main>
-        <footer></footer>
+      <main>
+        <div class="sections">
+          <section>
+            <div class="title-main">
+              <p>My name is</p>
+            </div>
+            <div class="title-main">
+              <h2>Brayan Medina</h2>
+            </div>
+            <div class="title-main">
+              <h3>Web developer</h3>
+            </div>
+            <div class="description-main">
+              <p>
+                I’m a software engineer specializes in designing, developing, and
+                maintaining web-based software applications.
+              </p>
+            </div>
+            <div class="button-abme">
+              <a class="button-dashboard">About Me</a>
+            </div>
+            <!-- https://assets3.lottiefiles.com/packages/lf20_xvmprung.json -->
+            <!-- https://assets9.lottiefiles.com/packages/lf20_m9fz64i8.json -->
+            <!-- https://assets6.lottiefiles.com/packages/lf20_nOfkZot060.json -->
+          </section>
+          <lottie-player
+            class="svg-developer-mobile"
+            src="https://assets6.lottiefiles.com/packages/lf20_nOfkZot060.json"
+            background="transparent"
+            style="display: none"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+          <lottie-player
+            class="svg-developer"
+            src="https://assets3.lottiefiles.com/packages/lf20_xvmprung.json"
+            background="transparent"
+            speed="1"
+            style="width: 600px; height: 600px"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+        <div class="sections">
+          <section style="width: 30%;height:300px;background-color:grey;margin:8rem 5px;"></section>
+          <section style="width: 70%;height:300px;background-color:grey;margin:8rem 5px;"></section>
+        </div>
+      </main>
+      
+      <footer></footer>
     </div>
   </body>
 </html>

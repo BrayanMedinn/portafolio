@@ -1,6 +1,7 @@
-$body: hsl(164, 61%, 65%);
+$body: cornflowerblue;
 $green: #CDF27E;
 $primary-title:hsl(0, 0%, 25%);
+$descriptions:#8892b0;
 $m-0: 0;
 
 $font-sans:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -16,7 +17,7 @@ body {
 header {
     padding: .5rem 2rem;
 }
-main {
+.sections {
     padding: 0 100px;
     display: flex;
 }
@@ -66,10 +67,12 @@ ul li {
     font-family: $font-cursive;
     background-color: white;
     margin: 0;
+    padding: 5px;
     font-size: 2rem;
     color: $body;
     transition-delay: 100ms;
-    animation: 1s ease-out 0s 1 slideText;
+    animation: 1s ease-out 0s 1 myNameIs;
+    transform: rotate(-9deg);
 }
 .title-main h2 {
     color: $primary-title;
@@ -79,24 +82,45 @@ ul li {
     animation: 1s ease-out 0s 1 slideText;
 }
 .title-main h3 {
-    color: $primary-title;
-    font-size: clamp(40px, 8vw, 80px);
+    color: lightgray;
+    font-size: clamp(40px, 8vw, 60px);
     transition-delay: 300ms;
     margin: $m-0;
     animation: 1s ease-out 0s 1 slideText;
-    -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: $primary-title;
 }
-main section {
+.description-main {
+    font-family: $font-sans;
+    color:$primary-title;
+    font-size: 20px;
+    transition-delay: 300ms;
+    width: 65%;
+    text-align: justify;
+    margin: $m-0;
+    animation: 1s ease-out 0s 1 slideText;
+    -webkit-text-stroke-width: 1.5px;
+}
+.button-abme {
+    margin: 50px 0;
+    text-align: left;
+}
+.button-dashboard {
+    color: lightgray;
+    background-color:$body;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: .8rem 8rem;
+    font-size: 22px;
+    font-family: $font-sans;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-stroke-width: 1.5px;
+}
+.sections section {
     padding-top: 100px;
     margin: 0 27px;
 }
-// @keyframes slideLogo {
-//     0% {
-
-//     }
-// }
 @keyframes slideText{
     0% {
         transform: translateY(-50%);
@@ -105,15 +129,34 @@ main section {
         transform: translateY(0);
     }
 }
+@keyframes myNameIs {
+    0% {
+        transform: translateY(-100%);
+    }
+    25% {
+        transform: rotate(9deg);
+    }
+    100% {
+        transform: translateY(0);
+        transform: rotate(-9deg);
+    }
+    
+}
+.nav-mobile {display: none;}
+
 @media only screen and (max-width: 600px) {
     .logo img {width: auto; height: 40px;}
     .nav-styled { display: none;}
-    main{padding: 0 40px; display: flex; flex-direction: column;}
-    main section {padding-top: 40px; margin:0;}
+    .sections {padding: 0 40px; display: flex; flex-direction: column;}
+    .sections section {padding-top: 40px; margin:0;}
     .svg-developer {
-        position: initial;
-        z-index: initial;
-        width: 335px !important;
-        height: auto !important;
+        display: none;
+    }
+    .svg-developer-mobile {
+        display:initial !important;
+    }
+    // .nav-mobile {}
+    .description-main {
+        width: 100%;
     }
 }
