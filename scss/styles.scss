@@ -109,7 +109,7 @@ ul li {
     background-color:$body;
     border: 1px solid white;
     border-radius: 4px;
-    padding: .8rem 8rem;
+    padding: .5rem 5rem;
     font-size: 22px;
     font-family: $font-sans;
     line-height: 1;
@@ -117,7 +117,7 @@ ul li {
     cursor: pointer;
     -webkit-text-stroke-width: 1.5px;
 }
-.sections section {
+.sections .dashboard-hero {
     padding-top: 100px;
     margin: 0 27px;
 }
@@ -148,7 +148,7 @@ ul li {
     .logo img {width: auto; height: 40px;}
     .nav-styled { display: none;}
     .sections {padding: 0 40px; display: flex; flex-direction: column;}
-    .sections section {padding-top: 40px; margin:0;}
+    .sections .dashboard-hero {padding-top: 40px; margin:0;}
     .svg-developer {
         display: none;
     }
@@ -159,4 +159,56 @@ ul li {
     .description-main {
         width: 100%;
     }
+    .w-30 {
+        width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+    .w-70 {
+        width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+}
+// Ipad pro tablet
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+// ipad & ipad mini
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .sections { padding: 0 35px; }
+    .sections .dashboard-hero { padding-top: 50px; margin: 0 10px; }
+    .svg-developer { display: none; }
+    .svg-developer-mobile { 
+        display: initial !important;
+        width: 300px !important;
+        height: 445px !important;
+        position: absolute;
+        z-index: -1;
+        right: 0; }
+}
+// ipad air
+
+// containers
+.w-30 {
+    width: 30%;
+    margin: 0 .5rem;
+}
+.m-3r {
+    margin: 3rem 0;
+}
+.w-70 {
+    width: 70%;
+    margin: 0 .5rem;
+}
+.h-300 {
+    height: 300px;
+}
+// backgrounds 
+.bg-grey {
+background-color: grey;
 }
