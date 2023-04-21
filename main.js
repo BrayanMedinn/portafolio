@@ -1,5 +1,9 @@
-const nav = document.querySelector(".nav-mobile");
+const nav = document.querySelector("header");
 
-nav.addEventListener('click', function() {
+const scrollFunction = () => {
+    if(document.body.scrollTop > 20 
+     || document.documentElement.scrollTop > 20){ nav.style.top = "-90px";}
+    else { nav.style.top = "0px"; }
+}
 
-});
+window.onscroll = () => {scrollFunction()};

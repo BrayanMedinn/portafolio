@@ -1,22 +1,133 @@
-body {
-  background-color: cornflowerblue;
+.container {
+  height: 100vh;
+}
+
+html, body {
+  background-color: white;
+  height: 100%;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+
+main {
+  background-color: cornflowerblue;
+  min-height: 100%;
 }
 
 header {
-  padding: 0.5rem 2rem;
+  position: fixed;
+  width: 98%;
+  display: block;
+  top: 0px;
+  transition: top 0.3s;
+  padding: 0 1rem;
+  background: white;
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  z-index: 1;
+}
+
+div {
+  border-top: 0;
+  border-bottom: 0;
+  outline: none;
+}
+
+.foot {
+  background-color: white;
+  color: hsl(0, 0%, 25%);
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.designed-by {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.social-media ul {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.social-media li a {
+  text-decoration: none;
+  padding: 0;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.m-3r {
+  margin: 3rem 0;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-80 {
+  height: 80px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.bg-grey {
+  background-color: grey;
 }
 
 .sections {
-  padding: 0 100px;
+  padding: 20px 100px;
   display: flex;
+}
+
+.angle {
+  position: relative;
+}
+
+.angle::after {
+  content: "";
+  position: absolute;
+}
+
+.polygon {
+  background-color: hsl(164, 61%, 65%);
+  height: 80px;
+  width: 100%;
+}
+
+.polygon::after {
+  height: 80px;
+  width: 100%;
+  background-color: cornflowerblue;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.section-two {
+  padding: 1rem 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: hsl(164, 61%, 65%);
 }
 
 .svg-developer {
   position: absolute;
-  z-index: -1;
   right: 0;
 }
 
@@ -43,12 +154,16 @@ ul {
 
 ul li {
   color: hsl(0, 0%, 25%);
+  box-shadow: inset 0 0 0 0 cornflowerblue;
   font-weight: bold;
-  padding: 0 20px;
+  padding: 10px 10px;
+  margin: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .nav-styled li:hover {
-  color: #CDF27E;
+  color: white;
+  box-shadow: inset 200px 0 0 0 cornflowerblue;
   cursor: pointer;
 }
 
@@ -126,7 +241,7 @@ ul li {
 }
 
 .sections .dashboard-hero {
-  padding-top: 100px;
+  padding-top: 200px;
   margin: 0 27px;
 }
 
@@ -167,8 +282,13 @@ ul li {
     display: flex;
     flex-direction: column;
   }
+  .section-two {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
   .sections .dashboard-hero {
-    padding-top: 40px;
+    padding-top: 8rem;
     margin: 0;
   }
   .svg-developer {
@@ -193,8 +313,11 @@ ul li {
   .sections {
     padding: 0 35px;
   }
+  .section-two {
+    padding: 0 35px;
+  }
   .sections .dashboard-hero {
-    padding-top: 50px;
+    padding-top: 9rem;
     margin: 0 10px;
   }
   .svg-developer {
@@ -203,30 +326,8 @@ ul li {
   .svg-developer-mobile {
     display: initial !important;
     width: 300px !important;
-    height: 445px !important;
+    height: 645px !important;
     position: absolute;
-    z-index: -1;
     right: 0;
   }
-}
-.w-30 {
-  width: 30%;
-  margin: 0 0.5rem;
-}
-
-.m-3r {
-  margin: 3rem 0;
-}
-
-.w-70 {
-  width: 70%;
-  margin: 0 0.5rem;
-}
-
-.h-300 {
-  height: 300px;
-}
-
-.bg-grey {
-  background-color: grey;
 }/*# sourceMappingURL=styles.css.map */
